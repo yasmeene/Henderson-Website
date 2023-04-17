@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
+<style>
+body, html 
+{
+  height: 100%;
+  margin: 0;
+  background-image: "background.png";
+}
+  
+/* Welcome message styling */
+.welcomeSign {
+  position: relative;
+  top: 8px;
+  left: 500px;
+  font-family: "Arial";
+  color: white;
+  font-size: 80px;
+  
+}
+  
+ /* Add styles to the form container */
+.announcement_slideshow {
+  position: absolute;
+  right: 16px;
+  bottom: 6px;
+  margin: 20px;
+}
+
+ /* Add styles to the time and date */
+ .dayntime {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  font-size: 30px;
+  font-family: "Arial";
+  font-style: bold;
+  color: white;
+  background-color:transparent;
+  border-radius: 25px;
+  padding: 20px; 
+  width: 200px;
+  height: 120px; 
+  text-align: center;
+  letter-spacing: 3px;
+}
+  
+</style>
+</head>
+<body>
+<div class="bg">
+  
+  <div class="welcomeSign">Welcome to <span style=color:DodgerBlue>Henderson</span></div>
+
+  <div class="announcement_slideshow">
+  	<iframe src="https://508.commons.hwdsb.on.ca/presentation/announcements/" style="height: 33vh; width: 66vh; border:none"></iframe>
+  </div>
+  
+  <div class="dayntime" id="currentTime"></div>
+  
+  
+  <script>
+    /*script for clock*/
+  function currentTime() {
+  let date = new Date(); 
+  let hh = date.getHours();
+  let mm = date.getMinutes();
+  let session = "AM";
+  let onetwo = date.getDate()%2;
+  let dow = date.getDay();
+  
+    /*figure out the time*/
+    
+  if(hh == 0){
+      hh = 12;
+  }
+  if(hh > 12){
+      hh = hh - 12;
+      session = "PM";
+   }
+
+   hh = (hh < 10) ? " " + hh : hh;
+   mm = (mm < 10) ? "0" + mm : mm;
+    
+   let time = hh + ":" + mm + " " + session;
+    
+    /*figure out the day of the week*/
+    if(dow == 0){
+      dow = "Sunday";
+    }
+    if(dow == 1){
+      dow = "Monday";
+    }
+    if(dow == 2){
+      dow = "Tuesday";
+    }
+    if(dow == 3){
+      dow = "Wednesday";
+    }
+    if(dow == 4){
+      dow = "Thursday";
+    }
+    if(dow == 5){
+      dow = "Friday";
+    }
+    if(dow == 6){
+      dow = "Saturday";
+    }
+    
+    /* output the final text*/
+
+  document.getElementById("currentTime").innerText = 
+    time 
+    + "\n" + dow 
+    + "\n Day " + onetwo; 
+    
+  let t = setTimeout(function(){ currentTime() }, 1000);
+  }
+  
+  currentTime();
+  </script>
+    
+  
+  
+  
+</div>
+
+</body>
+</html>
