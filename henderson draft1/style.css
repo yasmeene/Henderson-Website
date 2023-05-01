@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+#dtBox{
+    top: 10px;
+    width: 375px;
+    height: 200px;
+    border: 1px solid skyblue;
+    margin: auto;
+    right: 10px;
+    position: absolute;
+    text-align: center;
+    background: rgb(49, 138, 253);
+    color: white;
+    border-radius: 50px;
+}
+#time{
+    top: 70px;
+    position: relative;
+}
+#title{
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    font-size: 30px;
+    display: flex;
+    font-family:'Courier New', Courier, monospace;
+    font-style: italic;
+    font-weight: bold;
+    color: rgb(49, 138, 253);
+}
+
+#dnBox{
+    width: 375px;
+    height: 200px;
+    top: 220px;
+    border: 1px solid skyblue;
+    margin: auto;
+    right: 10px;
+    position: absolute;
+    text-align: center;
+    white-space: nowrap;
+    background: rgb(49, 138, 253);
+    color: white;
+    border-radius: 50px;
+} 
+#dayText{
+    padding-top: 50px;
+    position: relative;
+    white-space: nowrap;
+}
+
+.announcements{
+    width: 375px;
+    height: 200px;
+    top: 430px;
+    margin: auto;
+    right: 10px;
+    position: absolute;
+    
+}
+
+#bellTimes{
+    width: 375px;
+    height: 200px;
+    top: 640px;
+    border: 1px solid skyblue;
+    margin: auto;
+    right: 10px;
+    text-align: center;
+    white-space: nowrap;
+    background: rgb(49, 138, 253);
+    color: white;
+    border-radius: 50px;
+
+    position: absolute;
+    
+}
