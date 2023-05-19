@@ -3,31 +3,36 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Trirong">
-
-<body style="background-color:powderblue;">
-
-  <h1>This is a heading</h1>
-  <p>This is a paragraph.</p>
-  
-</body>
-
 <style>
 body, html 
 {
   height: 100%;
   margin: 0;
-  background: url(background.png);
+  background-color: rgb(41, 38, 38);
 }
   
 /* Welcome message styling */
 .welcomeSign {
-  position: relative;
-  bottom: 200px;
-  top: 80px;
-  left: 100px;
+  margin-top: 80px;
+  margin-left: 50px;
+  top: 8px;
+  left: 500px;
   font-family: "Arial";
+  font-weight: lighter;
+  color: white;
+  font-size: 55px;
+
+.henderson {
+  font-weight: bold;
   color: white;
   font-size: 80px;
+
+}
+
+.line {
+  color: dodgerblue;
+  margin-bottom: 250px;
+}
   
 }
   
@@ -42,8 +47,9 @@ body, html
  /* Add styles to the time and date */
  .dayntime {
   position: absolute;
+  margin-top: 100px;
   top: 8px;
-  right: 16px;
+  right: 50px;
   font-size: 30px;
   font-family: "Arial";
   font-style: bold;
@@ -56,18 +62,31 @@ body, html
   text-align: center;
   letter-spacing: 3px;
 }
+
+.text {
+  position: absolute;
+  margin-left: 1550px;
+  top: 50px;
+  font-size: 60px;
+  font-family: "Arial";
+  font-weight: bold;
+  color: white;
+  
+}
   
 </style>
 </head>
 <body>
 <div class="bg">
   
-  <div class="welcomeSign">Welcome to <span style=color:DodgerBlue>Henderson</span></div>
-<!--
+  <div class="welcomeSign">Welcome to <span class="henderson"><br>Henderson</span><div class="line">_____________________</div></div>
+  <div class="text">Today is</div>
+
+
   <div class="announcement_slideshow">
   	<iframe src="https://508.commons.hwdsb.on.ca/presentation/announcements/" style="height: 33vh; width: 66vh; border:none"></iframe>
   </div>
-  -->
+  
   <div class="dayntime" id="currentTime"></div>
   
   
@@ -132,6 +151,8 @@ body, html
   currentTime();
   </script>
     
+  
+  
   
 </div>
 
