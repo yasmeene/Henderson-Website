@@ -31,25 +31,19 @@ body, html
 
 .line {
   color: dodgerblue;
-  margin-bottom: 250px;
+  margin-bottom: 150px;
 }
   
 }
   
- /* Add styles to the form container */
-.announcement_slideshow {
-  position: absolute;
-  right: 16px;
-  bottom: 6px;
-  margin: 20px;
-}
+ 
 
  /* Add styles to the time and date */
  .dayntime {
   position: absolute;
   margin-top: 100px;
-  top: 8px;
-  right: 50px;
+  top: 15px;
+  right: 110px;
   font-size: 30px;
   font-family: "Arial";
   font-style: bold;
@@ -73,6 +67,38 @@ body, html
   color: white;
   
 }
+
+.upcoming{
+  position: absolute;
+  margin-left: 1540px;
+  top: 300px;
+  font-size: 60px;
+  font-family: "Arial";
+  font-weight: lighter;
+  color: white;
+
+}
+
+.bell-times{
+  position: absolute;
+  margin-left: 1535px;
+  top: 600px;
+  font-size: 60px;
+  font-family: "Arial";
+  font-weight: lighter;
+  color: white;
+}
+
+.layout{
+  margin-left: 350px;
+
+}
+
+.floor{
+  font-family: "Arial";
+  color: white;
+  margin-left: 1000px;
+}
   
 </style>
 </head>
@@ -82,10 +108,10 @@ body, html
   <div class="welcomeSign">Welcome to <span class="henderson"><br>Henderson</span><div class="line">_____________________</div></div>
   <div class="text">Today is</div>
 
+  
 
-  <div class="announcement_slideshow">
-  	<iframe src="https://508.commons.hwdsb.on.ca/presentation/announcements/" style="height: 33vh; width: 66vh; border:none"></iframe>
-  </div>
+
+
   
   <div class="dayntime" id="currentTime"></div>
   
@@ -155,6 +181,19 @@ body, html
   
   
 </div>
+<div class="upcoming">Upcoming</div>
+
+<div class="bell-times">Bell Times</div>
+
+
+<div class="floor">2nd Floor <br>3rd Floor<br></div>
+
+<img src="Image.png" class="layout">
+
+
+
+
+
 
 </body>
 </html>
